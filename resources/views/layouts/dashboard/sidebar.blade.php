@@ -6,6 +6,11 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Dashboard
                 </a>
+                <a class="nav-link {{ Str::startsWith(Route::currentRouteName(), 'profile.') ? 'active' : '' }}"
+                    href="{{ route('profile.index') }}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-building"></i></div>
+                    Profil
+                </a>
                 <a class="nav-link {{ Str::startsWith(Route::currentRouteName(), 'news.') ? 'active' : '' }}"
                     href="{{ route('news.index') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-newspaper"></i></div>

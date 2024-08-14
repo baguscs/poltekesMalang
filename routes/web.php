@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LandingController;
 use App\Models\Gallery;
 use App\Models\News;
+use App\Models\Testimoni;
+use App\Models\Profile;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +21,9 @@ use App\Models\News;
 Route::get('/', function () {
     $gallery = Gallery::latest()->limit(3)->get();
     $news = News::latest()->limit(3)->get();
-    return view('index', compact('gallery', 'news'));
+    $testimoni = Testimoni::latest()->limit(3)->get();
+    $profile = Profile::first();
+    return view('index', compact('gallery', 'news', 'testimoni', 'profile'));
 });
 
 Route::get('/index', [LandingController::class, 'index'])->name('landing.index');
@@ -43,3 +47,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('/news', App\Http\Controllers\NewsController::class);
 Route::resource('/gallery', App\Http\Controllers\GalleryController::class);
 Route::resource('/testimoni', App\Http\Controllers\TestimoniController::class);
+Route::resource('/profile', App\Http\Controllers\ProfileController::class);
+Route::post('/profile/updateName', [App\Http\Controllers\ProfileController::class, 'updateName'])->name('profile.updateName');
+Route::post('/profile/updateMotto', [App\Http\Controllers\ProfileController::class, 'updateMotto'])->name('profile.updateMotto');

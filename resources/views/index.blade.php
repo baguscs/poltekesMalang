@@ -3,8 +3,8 @@
     <section class="hero">
         <div class="hero-overlay">
             <div data-aos="fade-up" data-aos-duration="2000">
-                <h1 class="hero-text"> POLKESMA PRODI D3 KEPERAWATAN (KAMPUS KAB. PONOROGO)</h1>
-                <p>Beradab dan Berdaya Saing Global Dalam Upaya Promotif dan Preventif Keperawatan Diabetes Millitus </p>
+                <h1 class="hero-text"> {{ $profile->title }}</h1>
+                <p>{{ $profile->motto }}</p>
                 <a href="{{ route('landing.visi') }}" class="btn btn-success hero-btn">Visi dan Misi</a>
             </div>
         </div>

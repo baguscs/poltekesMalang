@@ -39,7 +39,7 @@ Route::get('/online-service', [LandingController::class, 'online'])->name('landi
 Route::get('/public-service', [LandingController::class, 'public'])->name('landing.public');
 Route::get('/legalisir-ijazah', [LandingController::class, 'legalisir'])->name('landing.legalisir');
 Route::get('/sertifikat-akreditasi', [LandingController::class, 'akreeditasi'])->name('landing.akreditasi');
-Route::get('/academic', [LandingController::class, 'academic'])->name('landing.academic');
+Route::get('/academics', [LandingController::class, 'academic'])->name('landing.academic');
 
 Auth::routes();
 
@@ -50,3 +50,4 @@ Route::resource('/testimoni', App\Http\Controllers\TestimoniController::class);
 Route::resource('/profile', App\Http\Controllers\ProfileController::class);
 Route::post('/profile/updateName', [App\Http\Controllers\ProfileController::class, 'updateName'])->name('profile.updateName');
 Route::post('/profile/updateMotto', [App\Http\Controllers\ProfileController::class, 'updateMotto'])->name('profile.updateMotto');
+Route::resource('/academic', App\Http\Controllers\AcademicController::class);

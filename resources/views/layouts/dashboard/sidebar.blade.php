@@ -26,6 +26,11 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-comments"></i></div>
                     Testimoni
                 </a>
+                <a class="nav-link {{ Str::startsWith(Route::currentRouteName(), 'academic.') ? 'active' : '' }}"
+                    href="{{ route('academic.index') }}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-graduation-cap"></i></div>
+                    Akademik
+                </a>
             </div>
         </div>
     </nav>

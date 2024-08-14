@@ -7,38 +7,24 @@
     </section>
     <div class="container my-5">
         <div class="row">
-            <div class="col-md-6">
-                <a href="https://drive.google.com/file/d/1QTOL8FWMWms6iw_85EXauA1j5IO3vqF0/view" target="_blank">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="text-center">
-                                <div class="mx-auto" style="width: 70px;">
-                                    <button class="btn btn-secondary rounded-circle">
-                                        <i class="fas fa-sticky-note"></i>
-                                    </button>
+            @foreach ($academic as $item)
+                <div class="col-md-6">
+                    <a href="{{ $item->attachment }}" class="text-decoration-none" target="_blank">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <div class="mx-auto" style="width: 70px;">
+                                        <button class="btn btn-secondary rounded-circle">
+                                            <i class="fas fa-sticky-note"></i>
+                                        </button>
+                                    </div>
+                                    <h4 class="mt-3 fw-bold">{{ $item->title }}</h4>
                                 </div>
-                                <h4 class="mt-3 fw-bold">Jadwal Moving Class Semester 2</h4>
                             </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6">
-                <a href="https://drive.google.com/file/d/1pSdm9SXSJIW5knOM5LmqrhsX8B0QYwoW/view" target="_blank">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="text-center">
-                                <div class="mx-auto" style="width: 70px;">
-                                    <button class="btn btn-secondary rounded-circle">
-                                        <i class="fas fa-sticky-note"></i>
-                                    </button>
-                                </div>
-                                <h4 class="mt-3 fw-bold">Jadwal Moving Class Semester 4</h4>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
+                    </a>
+                </div>
+            @endforeach
         </div>
     </div>
 @endsection

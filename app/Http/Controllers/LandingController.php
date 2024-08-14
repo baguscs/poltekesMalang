@@ -7,6 +7,7 @@ use App\Models\News;
 use App\Models\Gallery;
 use App\Models\Testimoni;
 use App\Models\Profile;
+use App\Models\Academic;
 
 class LandingController extends Controller
 {
@@ -85,6 +86,7 @@ class LandingController extends Controller
 
     public function academic()
     {
-        return view('landing.academic');
+        $academic = Academic::all();
+        return view('landing.academic', compact('academic'));
     }
 }

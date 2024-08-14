@@ -33,23 +33,20 @@
                     <a class="nav-link fs-5 {{ Str::startsWith(Route::currentRouteName(), 'landing.news') ? 'active' : '' }}"
                         href="{{ route('landing.news') }}">Berita</a>
                 </li>
-                <li class="nav-item dropdown px-3">
+                <li class="nav-item px-3">
+                    <a class="nav-link fs-5 {{ Str::startsWith(Route::currentRouteName(), 'landing.academic') ? 'active' : '' }}"
+                        href="{{ route('landing.academic') }}">Akademik</a>
+                </li>
+                {{-- <li class="nav-item dropdown px-3">
                     <a class="nav-link dropdown-toggle fs-5 {{ Route::currentRouteName() == 'landing.academic' ? 'active' : '' }}"
                         href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Akademik
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('landing.academic') }}">Kalender Akademik</a></li>
-                        <li><a class="dropdown-item"
-                                href="https://drive.google.com/file/d/1nuw30Dxql-CjCaDcyTLZVOe2WAJ_Affz/view">Jadwal
-                                Moving Class Smt 2</a>
-                        </li>
-                        <li><a class="dropdown-item"
-                                href="https://drive.google.com/file/d/1RFb3BLGCaLsZInw2UTCjy3_JV7Bme3_X/view">Jadwal
-                                Moving Class Smt 4</a>
+                        <li><a class="dropdown-item" href="{{ route('landing.academic') }}">Pemberitahuan Akademik</a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
                 <li class="nav-item dropdown px-3">
                     <a class="nav-link dropdown-toggle fs-5 {{ Route::currentRouteName() == 'landing.online' || Route::currentRouteName() == 'landing.public' ? 'active' : '' }}"
                         href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

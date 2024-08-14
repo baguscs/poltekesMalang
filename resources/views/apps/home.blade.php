@@ -29,6 +29,30 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-xl-6 col-md-6">
+                <div class="card bg-info text-white mb-4">
+                    <div class="card-body d-flex justify-content-between">Testimoni <span
+                            class="h5">{{ $testimoni }}</span>
+                    </div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a class="small text-white stretched-link" href="{{ route('testimoni.index') }}">View Details</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-md-6">
+                <div class="card bg-warning text-white mb-4">
+                    <div class="card-body d-flex justify-content-between">Akademik <span
+                            class="h5">{{ $academic }}</span>
+                    </div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a class="small text-white stretched-link" href="{{ route('academic.index') }}">View Details</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 @endsection
 @push('pageName')

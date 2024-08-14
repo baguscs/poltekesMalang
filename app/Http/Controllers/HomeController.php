@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\News;
 use App\Models\Gallery;
+use App\Models\Testimoni;
+use App\Models\Academic;
 
 class HomeController extends Controller
 {
@@ -27,6 +29,8 @@ class HomeController extends Controller
     {
         $news = News::all()->count();
         $gallery = Gallery::all()->count();
-        return view('apps.home', compact('news', 'gallery'));
+        $testimoni = Testimoni::all()->count();
+        $academic = Academic::all()->count();
+        return view('apps.home', compact('news', 'gallery', 'testimoni', 'academic'));
     }
 }

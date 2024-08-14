@@ -40,9 +40,13 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{ route('landing.academic') }}">Kalender Akademik</a></li>
-                        <li><a class="dropdown-item" href="{{ route('landing.public') }}">Jadwal Moving Class Smt 2</a>
+                        <li><a class="dropdown-item"
+                                href="https://drive.google.com/file/d/1nuw30Dxql-CjCaDcyTLZVOe2WAJ_Affz/view">Jadwal
+                                Moving Class Smt 2</a>
                         </li>
-                        <li><a class="dropdown-item" href="{{ route('landing.public') }}">Jadwal Moving Class Smt 4</a>
+                        <li><a class="dropdown-item"
+                                href="https://drive.google.com/file/d/1RFb3BLGCaLsZInw2UTCjy3_JV7Bme3_X/view">Jadwal
+                                Moving Class Smt 4</a>
                         </li>
                     </ul>
                 </li>

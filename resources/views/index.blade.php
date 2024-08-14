@@ -1,6 +1,35 @@
 @extends('layouts.landing.master')
 @section('content')
-    <section class="hero">
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{ asset('image/hero1.png') }}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ asset('image/hero2.png') }}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ asset('image/hero3.png') }}" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
         <div class="hero-overlay">
             <div data-aos="fade-up" data-aos-duration="2000">
                 <h1 class="hero-text"> {{ $profile->title }}</h1>
@@ -8,7 +37,7 @@
                 <a href="{{ route('landing.visi') }}" class="btn btn-success hero-btn">Visi dan Misi</a>
             </div>
         </div>
-    </section>
+    </div>
     <div class="container mb-5">
         <h3 class="fw-bold text-center mb-5 mt-5"><span class="underline">Tentang Kampus</span></h3>
         <div class="row">
@@ -139,26 +168,54 @@
             @endforeach
         </div>
     </div>
+    <h3 class="fw-bold text-center mb-5 mt-5"><span class="underline">Kontak Kami</span></h3>
+    <div class="container mb-5" data-aos="fade-up" data-aos-duration="1500">
+        <form action="" method="">
+            @csrf
+            <div class="row">
+                <div class="mb-3 col-md-6">
+                    <label for="exampleFormControlInput1" class="form-label">Nama</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Masukkan Nama"
+                        required>
+                </div>
+                <div class="mb-3 col-md-6">
+                    <label for="exampleFormControlInput1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Masukkan Email" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-3 col-md-12">
+                    <label for="exampleFormControlInput1" class="form-label">No. Telp</label>
+                    <input type="number" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Masukkan No. Telp" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Pesan</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+            </div>
+            <center>
+                <button type="submit" class="btn btn-success w-25" onclick="alert('Pesan Terkirim')">Kirim</button>
+            </center>
+        </form>
+        <div class="row mt-5">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11356.80647889465!2d111.46300645761414!3d-7.855384818716134!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e799f86ba944c69%3A0x67cfddcfa69c0952!2sPoltekkes%20Malang%20Kampus%20VI%20Ponorogo!5e0!3m2!1sid!2sid!4v1723275069845!5m2!1sid!2sid"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
 @endsection
 @push('style')
     <style>
-        .hero {
-            position: relative;
-            background: url('/image/hero1.png') no-repeat center center;
-            background-size: cover;
-            height: 100vh;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
         .hero-overlay {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
+            color: #ffff;
             background-color: rgba(0, 0, 0, 0.5);
             display: flex;
             align-items: center;

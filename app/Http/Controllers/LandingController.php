@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\News;
 use App\Models\Gallery;
 use App\Models\Testimoni;
+use App\Models\Profile;
 
 class LandingController extends Controller
 {
@@ -14,7 +15,8 @@ class LandingController extends Controller
         $gallery = Gallery::latest()->limit(3)->get();
         $news = News::latest()->limit(3)->get();
         $testimoni = Testimoni::latest()->limit(3)->get();
-        return view('index', compact('gallery', 'news', 'testimoni'));
+        $profile = Profile::first();
+        return view('index', compact('gallery', 'news', 'testimoni', 'profile'));
     }
 
     public function visi()

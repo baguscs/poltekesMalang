@@ -40,6 +40,7 @@ Route::get('/public-service', [LandingController::class, 'public'])->name('landi
 Route::get('/legalisir-ijazah', [LandingController::class, 'legalisir'])->name('landing.legalisir');
 Route::get('/sertifikat-akreditasi', [LandingController::class, 'akreeditasi'])->name('landing.akreditasi');
 Route::get('/academics', [LandingController::class, 'academic'])->name('landing.academic');
+Route::post('/send-mail', [LandingController::class, 'sendMail'])->name('landing.sendMail');
 
 Auth::routes();
 

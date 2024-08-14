@@ -170,30 +170,30 @@
     </div>
     <h3 class="fw-bold text-center mb-5 mt-5"><span class="underline">Kontak Kami</span></h3>
     <div class="container mb-5" data-aos="fade-up" data-aos-duration="1500">
-        <form action="" method="">
+        <form action="#" method="#">
             @csrf
             <div class="row">
                 <div class="mb-3 col-md-6">
                     <label for="exampleFormControlInput1" class="form-label">Nama</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Masukkan Nama"
-                        required>
+                    <input type="text" class="form-control" name="name" id="exampleFormControlInput1"
+                        placeholder="Masukkan Nama" value="{{ old('name') }}">
                 </div>
                 <div class="mb-3 col-md-6">
                     <label for="exampleFormControlInput1" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="Masukkan Email" required>
+                    <input type="email" name="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Masukkan Email" value="{{ old('email') }}">
                 </div>
             </div>
             <div class="row">
                 <div class="mb-3 col-md-12">
                     <label for="exampleFormControlInput1" class="form-label">No. Telp</label>
-                    <input type="number" class="form-control" id="exampleFormControlInput1"
-                        placeholder="Masukkan No. Telp" required>
+                    <input type="number" name="phone" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Masukkan No. Telp" value="{{ old('phone') }}">
                 </div>
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Pesan</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3">{{ old('message') }}</textarea>
             </div>
             <center>
                 <button type="submit" class="btn btn-success w-25" onclick="alert('Pesan Terkirim')">Kirim</button>

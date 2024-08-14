@@ -8,6 +8,7 @@ use App\Models\Gallery;
 use App\Models\Testimoni;
 use App\Models\Profile;
 use App\Models\Academic;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class LandingController extends Controller
 {
